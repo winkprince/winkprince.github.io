@@ -40,15 +40,45 @@
       perspective: 600px;
     }
 
+    @keyframes run {
+
+      0% {
+        transform: rotateX(0deg) rotateY(0deg);
+
+      }
+
+      25% {
+        transform: rotateX(10deg) rotateY(90deg);
+
+      }
+
+      50% {
+        transform: rotateX(0deg) rotateY(180deg);
+
+      }
+
+      75% {
+        transform: rotateX(-10deg) rotateY(270deg);
+
+      }
+
+      100% {
+        transform: rotateX(0deg) rotateY(360deg);
+
+      }
+
+    }
+
     .wrap {
       /* 3d */
       width: 135px;
       height: 240px;
-      margin: 100px auto;
+      margin: 90% auto;
       position: relative;
       /* border: 1px solid red; */
       transform: rotateX(-20deg) rotateY(0deg);
       transform-style: preserve-3d;
+      animation: run 30s linear infinite;
 
     }
 
